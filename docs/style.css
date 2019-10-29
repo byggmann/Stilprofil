@@ -69,6 +69,7 @@ nav li {
 .logoTable {
     border: 1px solid #000;
     border-collapse: collapse;
+    width: 100%;
 }
 
 .logoTable th {
@@ -94,10 +95,19 @@ nav li {
     border: 1px solid #000;
 }
 
+.stC {
+    width: 30%;
+}
+
+.ndC {
+    text-align: center;
+}
+
 /* fontTable */
 .fontTable {
     border: 1px solid #000;
     border-collapse: collapse;
+    width: 100%;
 }
 
 .fontTable td,
