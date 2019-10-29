@@ -80,3 +80,16 @@ nav li {
     border: 1px solid #000;
     padding: 5px;
 }
+
+/* colorTable */
+.colorTable {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+.colorTable td,
+.colorTable th {
+    padding: 5px;
+    border: 1px solid #000;
+}
