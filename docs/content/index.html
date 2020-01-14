@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lexto Stilprofil</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
+  </head>
+  <body>
+      <aside class="side-nav">
+        <nav>
+          <ul class="navigation-wrapper">
+            <a class="navigation-logo" href="#"><img src="../img/LEXTO-2018.png" /></a>
+            <li class="navigation-item">
+              <a class="navigation-link dropdown" href="../index.html">
+                Hjem
+              </a>
+              
+            </li>
+            <li class="navigation-item active">
+              <a class="navigation-link" href="#">
+                Innhold
+              </a>
+              <ul class="dropdown-menu open">
+                <li class="dropdown-item current"><a href="#typografi">Typografi</a></li>
+                <li class="dropdown-item"><a href="#ikoner">Ikoner</a></li>
+                <li class="dropdown-item"><a href="#bilder">Bilder</a></li>
+                <li class="dropdown-item"><a href="#farger">Farger</a></li>
+                <li class="dropdown-item"><a href="#variabler">Globale Variabler</a></li>
+                <li class="dropdown-item"><a href="#keyframes">Keyframes / Animasjoner</a></li>
+              </ul>
+            </li>
+            <li class="navigation-item">
+              <a href="../components/index.html">
+                Komponenter
+              </a>
+            </li>
+            <!-- <li class="navigation-item">
+              <a href="#">
+                Verktøy
+              </a>
+            </li> -->
+          </ul>
+        </nav>
+      </aside>
+        
+        <section class="main-section-wrapper">
+            <div class="container">
+                <h1>Lexto Stilprofil - Innhold</h1>
+                <div class="content" id="typografi">
+                    <h2>Typografi <span class="title-span">#</span></h2>
+                    <h3>Globalt</h3>
+                    <p>Generelt om typografi i Lexto</p>
+                    <ul class="styled-list">
+                        <li>Font-Familie: 'Montserrat', 'sans-serif', 'Open Sans' - native font stack skal implementeres</li>
+                        <li>Standard font-size: 16px</li>
+                        <li>Standard font-color: #1a1a1a</li>
+                        <li>Side-titler bruker CTA farge</li>
+                        <li>Headinger skal skrives semantisk</li>
+                    </ul>
+                    <h3>Titler</h3>
+                    <table>
+                        <thead>
+                            <th>Heading & Størrelse</th>
+                            <th>Eksempel</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <code>&lt;h1&gt; &lt;/h1&gt;</code>
+                                        - 1.875rem - 30px
+                                    </p>
+                                </td>
+                                <td><h1 style="font-size: 1.875rem">Eksempel</h1></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <code>&lt;h2&gt; &lt;/h2&gt;</code>
+                                        - 1.5rem - 24px
+                                    </p>
+                                </td>
+                                <td><h1 style="font-size: 1.5rem">Eksempel</h1></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <code>&lt;h3&gt; &lt;/h3&gt;</code>
+                                        - 1.25rem - 22px
+                                    </p>
+                                </td>
+                                <td><h1 style="font-size: 1.25rem">Eksempel</h1></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Paragrafer</h3>
+                    <ul class="styled-list">
+                        <li>Har resatt margin-top til 0, har margin-bottom: 1rem. Bruker 'Open Sans' font</li>
+                    </ul>
+                    <h3>Anchor-tags</h3>
+                    <ul class="styled-list">
+                        <li>Har CTA-farge som hover-farge</li>
+                        <li>Standard transition 0.2s all ease-in-out</li>
+                    </ul>
+                    <h3>Lister</h3>
+                    <ul class="styled-list">
+                        <li>Default styling er fjernet</li>
+                        <li>Margin/Padding resatt</li>
+                    </ul>
+                </div>
+                <div class="content" id="ikoner">
+                    <h2>Ikoner <span class="title-span">#</span></h2>
+                    <p>I Lexto bruker vi FontAwesome Pro for å hente ulike SVG ikoner.</p>
+                    <p>Retningslinjer:</p>
+                    <ul class="styled-list">
+                        <li>Det skal kun brukest light ikoner med mindre annet er ønsket</li>
+                        <li>Der er ikke satt noen regler på størrelse. Tilpass etter behov, men default holder som oftest</li>
+                        <li>Brukes kun på logiske plasser, f.eks i navigasjon for å illustrere side-funksjon</li>
+                        <li>Unngå overdrevent bruk av ikoner i knapper</li>
+                        <li>Ved bruk av ikoner i knapper, skal de være høyrejustert</li>
+                    </ul>
+                    <p>Eksempel på bruk av ikoner fra FA:</p>
+                    <pre class="with-preview">
+                        <div>
+                            <span class="preview-title">Markup</span>
+                            <code>&lt;i class="fal fa-trash-alt"&gt;&lt;/&gt;</code>
+                        </div>
+                        <div>
+                            <span class="preview-title">Resultat</span>
+                            <i class="fal fa-trash-alt"></i>
+                        </div>
+                    </pre>
+                    <p>FontAwesome hentes inn via ekstern CDN. Dette skal etterhvert legges inn lokalt for å unngå risiko for feil dersom ekstern CDN skulle gå ned.</p>
+                    <p>Bla gjennom de ulike ikonene her:</p>
+                    <pre><a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a></pre>
+                </div>
+                <div class="content" id="bilder">
+                    <h2>Bilder <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+                <div class="content" id="farger">
+                    <h2>Farger <span class="title-span">#</span></h2>
+                    <h3>Fargepalett</h3>
+                    <table>
+                        <thead>
+                            <th>Orange - CTA</th>
+                            <th>Orange - Light</th>
+                            <th>Primary</th>
+                            <th>Primary - Dark</th>
+                            <th>Secondary</th>
+                            <th>Secondary - Dark</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ff520d</td>
+                                <td>#ee571b</td>
+                                <td>#4e4e4e</td>
+                                <td>#373737</td>
+                                <td>#eeeeee</td>
+                                <td>#dcdbdb</td>
+                            </tr>
+                            <tr>
+                                <td style="height: 4rem; background-color: #ff520d;"> </td>
+                                <td style="background-color: #ee571b;"> </td>
+                                <td style="background-color: #4e4e4e;"> </td>
+                                <td style="background-color: #373737;"> </td>
+                                <td style="background-color: #eeeeee;"> </td>
+                                <td style="background-color: #dcdbdb;"> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Andre farger</h3>
+                    <table>
+                        <thead>
+                            <th>Fargekode</th>
+                            <th>Bruksområde</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#bebebe</td>
+                                <td>Brukes på blant annet border</td>
+                            </tr>
+                            <tr>
+                                <td>#1a1a1a</td>
+                                <td>Brukes på blant annet paragrafer, titler </td>
+                            </tr>
+                            <tr>
+                                <td>#fcfcfc</td>
+                                <td>Brukes på</td>
+                            </tr>
+                            <tr>
+                                <td>#f5f5f5</td>
+                                <td>Brukes som tekstfarge på mørke bakgrunner</td>
+                            </tr>
+                            <tr>
+                                <td>#f15d5f</td>
+                                <td>Brukes på tekst som viser feil/fare</td>
+                            </tr>
+                            <tr>
+                                <td>#e33030</td>
+                                <td>Brukes på tekst som viser advarsel</td>
+                            </tr>
+                            <tr>
+                                <td>#2092d1</td>
+                                <td>Brukes på tekst som viser informasjon</td>
+                            </tr>
+                            <tr>
+                                <td>#317f43</td>
+                                <td>Brukes på f.eks godkjente tilbakemeldinger/varsler</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Kjøreregler:</h3>
+                    <ul class="styled-list">
+                        <li>Hover farge skal være mørkere enn visningsfargen</li>
+                        <li>Primary oransje (CTA) skal brukes med skjønn. Kun for å fremheve viktige elementer</li>
+                        <li>Primary skal generelt brukes for der vi ønsker å føre bruker</li>
+                        <li>Secondary skal brukes på f.eks avbryt knapper og valg brukeren har som skal være der, men ikke er hovedfunksjon</li>
+                    </ul>
+                </div>
+                <div class="content" id="variabler">
+                    <h2>Globale Variabler <span class="title-span">#</span></h2>
+                    <p>Globale variabler (SCSS Variabler) er satt opp for blant annet farger. Alle variabler kan du finne under:</p>
+                    <pre>Lexto - Frontend\css\diverse\_variables.scss</pre>
+                    <h3>Eksempel på tilgjengelige variabler</h3>
+                    <table>
+                        <thead>
+                            <th>Variabel-navn</th>
+                            <th>Variabel-verdi</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$color-cta</td>
+                                <td>#ff520d</td>
+                            </tr>
+                            <tr>
+                                <td>$color-cta-hover</td>
+                                <td>#ee571b</td>
+                            </tr>
+                            <tr>
+                                <td>$transition-default</td>
+                                <td>all 0.2s ease-in-out</td>
+                            </tr>
+                            <tr>
+                                <td>$shadow-default</td>
+                                <td>0px 1px 4px rgba(0, 0, 0, 0.25)</td>
+                            </tr>
+                            <tr>
+                                <td>$border-radius-default</td>
+                                <td>5px</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="content" id="keyframes">
+                    <h2>Keyframes / Animasjoner <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+  </body>
+  <script type="text/javascript" src="../index.js"></script>
+</html>

@@ -2,57 +2,94 @@
 <html>
   <head>
     <title>Lexto Stilprofil</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
   </head>
   <body>
-      <nav>
-          <ul>
-            <li>
-              <a href="index.html">
+      <aside class="side-nav">
+        <nav>
+          <ul class="navigation-wrapper">
+            <a class="navigation-logo" href="#"><img src="./img/LEXTO-2018.png" /></a>
+            <li class="navigation-item active">
+              <a class="navigation-link dropdown" href="#">
                 Hjem
               </a>
+              <ul class="dropdown-menu open">
+                <li class="dropdown-item current"><a href="#innleding">Innleding</a</li>
+                <li class="dropdown-item"><a href="#generelt">Generelt</a></li>
+                <li class="dropdown-item"><a href="#forklaringer">Forklaringer</a></li>
+                <li class="dropdown-item"><a href="#hjelp">Hjelp</a></li>
+              </ul>
             </li>
-            <li>
-              <a href="icons.html">
-                Ikoner
+            <li class="navigation-item">
+              <a href="./content/index.html">
+                Innhold
               </a>
             </li>
-            <li>
-              <a href="colors.html">
-                Farger
+            <li class="navigation-item">
+              <a href="./components/index.html">
+                Komponenter
               </a>
             </li>
-            <li>
-              <a href="fonts.html">
-                Fonter
+            <!-- <li class="navigation-item">
+              <a href="#">
+                Verktøy
               </a>
-            </li>
-            <li>
-              <a href="logos.html">
-                Logoer
-              </a>
-            </li>
+            </li> -->
           </ul>
         </nav>
+      </aside>
         
-        <div class="bodyContainer">
-          <p>
-            Dette er stilprofilen til Lexto.<br>
-            <ul>
-              <li>
-                Under <em><a href="icons.html">Ikoner</a></em> finner du hvilke FontAwesome-ikoner som skal brukes for forskjellige formål.<br>
-              </li>
-              <li>
-                Under <em><a href="colors.html">Farger</a></em> finner du fargepaletten vår.
-              </li>
-              <li>
-                Under <em><a href="fonts.html">Fonter</a></em> finner du hvilke fonter og størrelser som skal brukes.
-              </li>
-              <li>
-                Under <em><a href="logos.html">Logoer</a></em> finner du hvilke logoer og størrelser som skal brukes.
-              </li>
-            </ul>
-          </p>
-        </div>
+        <section class="main-section-wrapper">
+          <div class="container">
+            <h1>Lexto Stilprofil - Hjem</h1>
+            <div class="content" id="innleding">
+              <h2>Innleding <span class="title-span">#</span></h2>
+              <p>Her finner du informasjon relatert til Lexto sin stilprofil. Naviger deg rundt ved hjelp av sidemenyen for å utforske designet. Du vil blant annet finne informasjon om:</p>
+              <ul class="styled-list">
+                <li>Generelle styling retningslinjer</li>
+                <li>Fargepalett</li>
+                <li>Styling for ulike komponenter</li>
+                <li>Sidestruktur / Grid</li>
+                <li>Bildebruk, logoer og ikoner</li>
+              </ul>
+              <p>Merk at dette er en beskrivelse som skal brukes internt.</p>
+            </div>
+            <div class="content" id="generelt">
+              <h2>Generelt <span class="title-span">#</span class="title-span"></h2>
+              <p>Du kan finne et komplett PDF som illustrerer systemets design på lokal filserver under:</p> <pre>BM:\Felles\Lexto\Design\Lexto_Wireframe_v1.0.pdf</pre>
+              <p>All styling foregår i Lexto Frontend. Merk at mye kode er fortsatt server-side rendered via Lexto (PHP), men det skal brukes klasser som lages i Lexto - Frontend for å styre all styling.</p>
+              <p>Lexto - Frontend er utstyrt med 'live-reload', og endringer av klasser/styling vil endres automatisk når du kjører <strong>yarn dev:watch</strong></p>
+              <p>Målet er å bruke mest mulig gjenbrukbare klasser for å sørge for at designet og stilen over hele platformen er samme. Dette bidrar til gjenkjennelighet, som gir bedre brukeropplevelse og effektivitet ved bruk av systemet.</p>
+              <p>Du vil her inne finne eksempler på komponenter som brukes rundt om i systemet, med bilde referanse og eksempel kode som skal brukes.</p>
+            </div>
+            <div class="content" id="forklaringer">
+              <h2>Forklaringer <span class="title-span">#</span class="title-span"></h2>
+              <h3>Lexto - Frontend</h3>
+              <p>Her finner du all styling relatert kode for systemet. Styling er primært splittet opp i atom, moduler, molekyler og organismer. Alle SCSS filer finner du under: </p>
+              <pre>Lexto - Frontend\assets\css</pre>
+              <h4>Organismer:</h4>
+              <p>Gjelder for en hel spesifik side. For eksempel vil <strong>Prosjekt</strong> ha overordnet styling fra <strong>_org_projects.scss</strong></p>
+              <h4>Molekyler:</h4>
+              <p>Gjelder et spesifikt komponent som tilhører en eller flere sider. For eksempel vil <strong>breadcrumbs</strong> bruke <strong>_mol_breadcrumbs.scss</strong></p>
+              <h4>Atomer:</h4>
+              <p>Gjelder for små spesifike komponenter. For eksempel vil <strong>_atom_btnnodefault.scss</strong> fjerne standard <strong>button</strong> layout dersom klassen brukes.</p>
+              <h4>Diverse:</h4>
+              <p>Her ligger diverse globale stylesheets, som beskriver blant annet globale variabler, mixins og keyframes.</p>
+            </div>
+
+            <div class="content" id="hjelp">
+              <h2>Hjelp <span class="title-span">#</span></h2>
+              <p>Dersom du har trøbbel med noe styling relatert, hør med de rundt deg. Om du finner noen feil i denne beskrivelsen så gi beskjed slik det kan rettes opp i så fort som mulig.</p>
+              <p>Dersom du mener noe mangler i denne beskrivelsen må du også gi beskjed slik beskrivelsen kan oppdaterest for å tilfredsstille behovet.</p>
+              <p><i class="fab fa-github" ></i> Stilprofil GitHub repository:</p>
+              <pre><a href="https://github.com/byggmann/stilprofil/" target="_blank">https://github.com/byggmann/stilprofil/</a></pre>
+              <p>Opprettet 13.01.2020 - Sist oppdatert 13.01.2020</p>
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+          </div.>
+        </section>
   </body>
+  <script type="text/javascript" src="index.js"></script>
 </html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lexto Stilprofil</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
+  </head>
+  <body>
+      <aside class="side-nav">
+        <nav>
+          <ul class="navigation-wrapper">
+            <a class="navigation-logo" href="#"><img src="../img/LEXTO-2018.png" /></a>
+            <li class="navigation-item">
+              <a class="navigation-link dropdown" href="../index.html">
+                Hjem
+              </a>
+              
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="../content/index.html">
+                Innhold
+              </a>
+              
+            </li>
+            <li class="navigation-item active">
+              <a class="navigation-link" href="#">
+                Komponenter
+              </a>
+              <ul class="dropdown-menu open">
+                <li class="dropdown-item current"><a href="#alert">Alert</a></li>
+                <li class="dropdown-item"><a href="#breadcrumb">Breadcrumb</a></li>
+                <li class="dropdown-item"><a href="#buttons">Buttons</a></li>
+                <li class="dropdown-item"><a href="#card">Card</a></li>
+                <li class="dropdown-item"><a href="#container">Container</a></li>
+                <li class="dropdown-item"><a href="#dropdown">Dropdown</a></li>
+                <li class="dropdown-item"><a href="#forms">Forms</a></li>
+                <li class="dropdown-item"><a href="#listgroups">List Groups</a></li>
+                <li class="dropdown-item"><a href="#modal">Modal</a></li>
+                <li class="dropdown-item"><a href="#navs">Navs</a></li>
+                <li class="dropdown-item"><a href="#pagination">Pagination</a></li>
+                <li class="dropdown-item"><a href="#progress">Progress</a></li>
+                <li class="dropdown-item"><a href="#tooltips">Tooltips</a></li>
+
+              </ul>
+            </li>
+            <!-- <li class="navigation-item">
+              <a href="#">
+                Verktøy
+              </a>
+            </li> -->
+          </ul>
+        </nav>
+      </aside>
+        
+        <section class="main-section-wrapper">
+            <div class="container">
+                <h1>Lexto Stilprofil - Komponenter</h1>
+                <div class="content" id="alert">
+                    <h2>Alert <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+                <div class="content" id="breadcrumb">
+                    <h2>Breadcrumb <span class="title-span">#</span></h2>
+                    <p>Breadcrumbs logikken styres av Lexto i PHP. Styling finner du i Lexto - Frontend under:</p>
+                    <pre>Lexto - Frontend\css\_molecules\_mol_breadcrumbs.scss</pre>
+                    <p></p>
+                    
+                </div>
+                <div class="content" id="buttons">
+                    <h2>Buttons <span class="title-span">#</span></h2>
+                    <p>Alle knapper følger egen standard, primary, secondary og call-to-action. Der er kjøreregler på når hver enkelt skal brukes</p>
+                    <h3>Generelt</h3>
+                    <p>For semantisk struktur burde knapper være markert som <strong>button</strong>, alternativt <strong>a</strong>-tags</p>
+                    <p>All styling på knapper styres av klasser. Du finner klassene under:</p>
+                    <pre>Lexto - Frontend\css\_modules\_buttons.scss</pre>
+                    <p>Alle knapper skal ha hovedklassen <strong>.btn</strong> som gir generell styling som padding, margin osv. Men må kombineres med hvilken type knapp det er, for eksempel:</p>
+                    <div class="double-preview">
+                        <pre>
+                            <span class="preview-title">Markup</span>
+                            <code>&lt;button class="btn btn-primary"&gt;Click me!&lt;/button&gt;</code>
+                        </pre>
+                        <pre>
+                            <span class="preview-title">Preview</span>
+                            <button class="btn btn-primary">Click me!</button>
+                        </pre>
+                    </div>
+                    <h3>Call-to-action buttons</h3>
+                    <ul class="styled-list">
+                        <li>CTA knapper skal det kun være en av per side, brukes kun for å visuelt guide bruker mot å gjøre en aksjon</li>
+                        <li>Styres ved å gi klassen <strong>btn btn-cta</strong></li>
+                    </ul>
+                    <h3>Primary buttons</h3>
+                    <ul class="styled-list">
+                        <li>Primary knapper skal ideelt sett kun brukes 1-3 ganger på samme side</li>
+                        <li>Skal være visuell guide for bruker for å komme dit brukeren skal</li>
+                        <li>Styres ved å gi klassen <strong>btn btn-primary</strong></li>
+                    </ul>
+                    <h3>Secondary Buttons</h3>
+                    <ul class="styled-list">
+                        <li>Kan brukes 'over alt' for sekundære handlinger tilgjengelige for brukeren.</li>
+                        <li>Brukes eksempelvis på avbryt knapper eller slett knapper</li>
+                        <li>Styres ved å gi klassen <strong>btn btn-secondary</strong></li>
+                    </ul>
+                </div>
+                <div class="content" id="card">
+                    <h2>Card <span class="title-span">#</span></h2>
+                    <p>Kort brukes mye rundt om på systemet. Ofte brukes de på steg der du oppretter noe, f.eks en ny bruker eller kontakt, men også nyhetsartikler o.l.</p>
+                    <p>Verdier <strong>.card</strong> klassen gir:</p>
+                    <ul class="styled-list">
+                        <li>1rem padding (for spacing)</li>
+                        <li>5px border radius</li>
+                        <li>default box-shadow (for bedre synlighet)</li>
+                    </ul>
+                    <h3>Eksempel</h3>
+                    <div class="double-preview">
+                        <pre>
+                            <span class="preview-title">Markup</span>
+                            <code>&lt;div class="card"&gt;I'm a card!&lt;/button&gt;</code>
+                        </pre>
+                        <pre>
+                            <span class="preview-title">Preview</span>
+                            <div class="card">I'm a card!</div>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" id="container">
+                    <h2>Container <span class="title-span">#</span></h2>
+                    <p>Brukes for generell wrapping av innhold på alle sider. Setter margin/padding for spacing samt styling for å gi en uthevet effekt.</p>
+                    <p>Stylingen for kontainere finner du under:</p>
+                    <pre>Lexto - Frontend\css\_molecules\_mol_container.scss</pre>
+                    <p>Verdier <strong>.mol_container</strong> klassen gir:</p>
+                    <ul class="styled-list">
+                        <li>Padding og margin på 1rem</li>
+                        <li>Default box-shadow</li>
+                        <li>5px border-radius</li>
+                        <li>Relativ posisjon (for absolutte elementer)</li>
+                        <li>Bakgrunnsfarge: #fefefe</li>
+                    </ul>
+                    <h3>Eksempel</h3>
+                    <div class="double-preview">
+                        <pre>
+                            <span class="preview-title">Markup</span>
+                            <code>&lt;div class="mol_container"&gt;I'm a container!!!&lt;/button&gt;</code>
+                        </pre>
+                        <pre>
+                            <span class="preview-title">Preview</span>
+                            <div class="containerr">I'm a container!!!</div>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" id="dropdown">
+                    <h2>Dropdown <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+                <div class="content" id="forms">
+                    <h2>Forms <span class="title-span">#</span></h2>
+                    <p>Det er lagt på egen styling for form komponenter som inputs, textfields etc.</p>
+                    <p>Husk å bruk korrekte type attributer (eks: email for e-post addresser eller number for tall) på input elementer slik de får korrekt input kontroll.</p>
+                    <h3>Eksempel på form</h3>
+                    <pre>
+
+                    </pre>
+                    <h3>Inputs</h3>
+                    <p>Har egen klasse som du finner:</p>
+                    <pre>Lexto - Frontend\css\common\_input.scss</pre>
+                    <h4>Eksempel</h4>
+                    <div class="double-preview">
+                        <pre>
+                            <span class="preview-title">Markup</span>
+                            <code>&lt;label for="example"&gt;Example&lt;/label&gt;
+    &lt;input id="example" class="input-default"&gt;I'm a container!!!&lt;/input&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <span class="preview-title">Preview</span>
+                            <label for ="example">Example</label>
+                            <input class="input-default">I'm a container!!!</input>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" id="listgroups">
+                    <h2>List Groups <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+                <div class="content" id="modal">
+                    <h2>Modal <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+                <div class="content" id="navs">
+                    <h2>Navs <span class="title-span">#</span></h2>
+                    <p>Egen styling for å gi custom navigering. Brukes på f.eks tabs på en side for å skifte mellom funksjoner etc.</p>
+                    <p>Kode for navigasjon finner du under:</p>
+                    <pre>Lexto - Frontend\css\_molecules\_mol_navigation.scss</pre>
+                    <h3>Eksempel på navigasjon markup</h3>
+                    <pre>
+                        <span class="preview-title">Markup</span>
+                        <code style="padding: 0">
+                            &lt;ul class="navigation-wrapper"&gt;
+                                &lt;li class="navigation-item active"&gt;
+                                    &lt;a class="navigation-link"&gt;Hjem&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class="navigation-item"&gt;
+                                    &lt;a class="navigation-link"&gt;Om Oss&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                    <div style="position: relative;">
+                        <span class="preview-title">Preview</span>
+                        <ul class="navigation-wrapperr">
+                            <li class="navigation-itemm activee">
+                                <a class="navigation-linkk">Hjem</a>
+                            </li>
+                            <li class="navigation-itemm">
+                                <a class="navigation-linkk">Om Oss</a>
+                            </li>
+                        </ul>
+                    </d>
+                    
+                </div>
+
+                <div class="content" id="pagination">
+                    <h2>Pagination <span class="title-span">#</span></h2>
+                    <p>Pagination styling finner du under:</p>
+                    <pre>Lexto - Frontend\css\_modules\_pagination.scss</pre>
+                    <h3>Eksempel</h3>
+                    <pre>
+                        <span class="preview-title">Markup</span>
+                        <code style="padding: 0;">
+                            &lt;ul class="pagination"&gt;
+                                &lt;li class="active"&gt;
+                                    &lt;a&gt;1&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a&gt;2&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a&gt;3&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+
+                    </pre>
+                    <div style="position: relative;">
+                        <span class="preview-title">Preview</span>
+                        <ul class="pagination">
+                            <li class="active">
+                                <a>1</a>
+                            </li>
+                            <li>
+                                <a>2</a>
+                            </li>
+                            <li>
+                                <a>3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content" id="progress">
+                    <h2>Progress <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+                <div class="content" id="tooltip">
+                    <h2>Tooltip <span class="title-span">#</span></h2>
+                    <p>Kommer snart...</p>
+                </div>
+
+            </div>
+        </section>
+</body>
+<script type="text/javascript" src="../index.js"></script>
+</html>
