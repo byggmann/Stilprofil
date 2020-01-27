@@ -40,6 +40,7 @@
                 <li class="dropdown-item"><a href="#navs">Navs</a></li>
                 <li class="dropdown-item"><a href="#pagination">Pagination</a></li>
                 <li class="dropdown-item"><a href="#progress">Progress</a></li>
+                <li class="dropdown-item"><a href="#select">Select</a></li>
                 <li class="dropdown-item"><a href="#tooltips">Tooltips</a></li>
 
               </ul>
@@ -151,7 +152,41 @@
                 </div>
                 <div class="content" id="dropdown">
                     <h2>Dropdown <span class="title-span">#</span></h2>
-                    <p>Kommer snart...</p>
+                    <p>Dropdown gir deg en nedtrekksliste du kan ha alternativer inne i.</p>
+                    <p>Styling for dropdown finner du under:</p>
+                    <pre>Lexto - Frontend\css\atoms\_atom_dropdown.scss</pre>
+                    <h3>Eksempel</h3>
+                    <div class="double-preview">
+                        <pre>
+                            <span class="preview-title">Markup</span>
+                        <code>
+&lt;div class="custom-dropdown"&gt;
+    &lt;button class="btn btn-secondary" data-toggle="custom-dropdown"&gt;Click me!&lt;/button&gt;
+    &lt;ul class="custom-dropdown-menu"&gt;
+        &lt;li&gt;Alternativ 1&lt;/li&gt;
+        &lt;li&gt;Alternativ 2&lt;/li&gt;
+        &lt;li&gt;Alternativ 3&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                        </code>
+                        </pre>
+                        <pre>
+                            <span class="preview-title">Preview</span>
+                            <code class="code-center">
+                                <div class="custom-dropdown">
+                                    <button class="btn btn-secondary" data-toggle="custom-dropdown">Click me!</button>
+                                    <ul class="custom-dropdown-menu">
+                                        <li>Alternativ 1</li>
+                                        <li>Alternativ 2</li>
+                                        <li>Alternativ 3</li>
+                                    </ul>
+                                </div>
+                            </code>
+                                
+                           
+                        </pre>
+                        
+                    </div>
                 </div>
                 <div class="content" id="forms">
                     <h2>Forms <span class="title-span">#</span></h2>
@@ -216,7 +251,7 @@
                                 <a class="navigation-linkk">Om Oss</a>
                             </li>
                         </ul>
-                    </d>
+                    </div>
                     
                 </div>
 
@@ -270,4 +305,24 @@
         </section>
 </body>
 <script type="text/javascript" src="../index.js"></script>
+<script>
+const key = 'button[data-toggle="custom-dropdown"]';
+const toggler = document.querySelectorAll(key)
+for (let i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener('click', () => {
+        toggler[i].parentElement.classList.toggle('open');
+    })
+}
+
+window.onclick = (e) => {
+    if(!e.target.matches(key)) {
+        const dropdown = document.querySelectorAll('.custom-dropdown');
+        for (let i = 0; i < dropdown.length; i++) {
+            if(dropdown[i].classList.contains('open')) {
+                dropdown[i].classList.remove('open');
+            }
+        }
+    }
+}
+</script>
 </html>
